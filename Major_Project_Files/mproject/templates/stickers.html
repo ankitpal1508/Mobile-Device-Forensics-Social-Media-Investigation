@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Stickers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stickers.css') }}">
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Stickers</h1>
+    </header>
+
+    <main>
+        <div class="photos-container">
+            {% if stickers %}
+                <div class="photo-gallery">
+                    {% for sticker in stickers %}
+                    <div class="photo-item">
+                        <img src="{{ url_for('serve_media', folder_name='WhatsApp_Stickers', subfolder_name='WhatsApp Stickers', filename=sticker) }}" alt="{{ sticker }}" class="photo">
+                        <p>{{ sticker }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No stickers found.</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WhatsApp Data Extraction</p>
+    </footer>
+</body>
+</html>

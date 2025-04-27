@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Data Extraction</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100..900&family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='WhatsApp.css') }}">
+</head>
+<body>
+<main>
+    <nav>
+        <i class="fa-brands fa-whatsapp" style="color: #fafafa;"></i>
+        Whatsapp Data
+    </nav>
+
+    <section>
+        <div class="question">What type of data do you want to extract?</div>
+        <div class="grid">
+            
+
+            <div class="option" onclick="selectOption(this, 'Photos', '/photos')">
+                <i class="fa-solid fa-image"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Photos</p>
+            </div>
+
+            <div class="option" onclick="selectOption(this, 'Videos', '/videos')">
+                <i class="fa-solid fa-video"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Videos</p>
+            </div>
+
+            <div class="option" onclick="selectOption(this, 'Documents', '/documents')">
+                <i class="fa-solid fa-file"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Documents</p>
+            </div>
+
+            <div class="option" onclick="selectOption(this, 'Audio', '/audio')">
+                <i class="fa-solid fa-file-audio"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Audio</p>
+            </div>
+
+            <div class="option option-gif" onclick="selectOption(this, 'Animated GIFs', '/gifs')">
+                <i class="fa-solid fa-photo-film"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Animated GIFs</p>
+            </div>
+
+            <div class="option" onclick="selectOption(this, 'Contacts', '/contacts')">
+                <i class="fa-solid fa-address-book"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Contacts</p>
+            </div>
+
+            <div class="option" onclick="selectOption(this, 'Texts', '/texts')">
+                <i class="fa-regular fa-message"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Texts</p>
+            </div>
+
+            <div class="option" onclick="selectOption(this, 'Extract All Media', '/all-media')">
+                <i class="fa-solid fa-face-grin-squint-tears"></i>
+                <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                <p>Stickers</p>
+            </div>
+        </div>
+
+        <button class="btn-proceed" onclick="handleNext()">Next</button>
+    </section>
+</main>
+
+<script src="{{ url_for('static', filename='WhatappData.js') }}"></script>
+</body>
+</html>

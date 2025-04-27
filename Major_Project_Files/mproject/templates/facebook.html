@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search History Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='FaceBook.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <main>
+        
+
+        <section>
+            <div class="question">What type of data do you want to extract?</div>
+            <div class="grid">
+                <div class="option">
+                    <i class="fa-solid fa-history"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Account Activity</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Search History</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Pages Visit</p>
+                </div>
+
+                <div class="option">
+                    <!-- <i class="fas fa-user-clock"></i> -->
+
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Chats</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-link"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Links Visited</p>
+                </div>
+                <div class="option">
+                    <i class="fa-regular fa-comment-dots"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Comments & Reactions</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Followers</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-handshake"></i>
+                    <div class="checkbox"><i class="ri-check-line check-icon"></i></div>
+                    <p>Friends</p>
+                </div>
+            
+                
+            </div>
+
+            <button class="btn-proceed">Next</button>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progress-text"></div>
+        </section>
+    </main>
+    <script src="{{ url_for('static', filename='facebook.js') }}"></script>
+</body>
+</html>

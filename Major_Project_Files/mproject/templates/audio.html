@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Audio</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='audio.css') }}?v={{ timestamp }}">
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Audio</h1>
+    </header>
+
+    <main>
+        <div class="audio-container">
+            {% if audio %}
+                <div class="audio-gallery">
+                    {% for audio_file in audio %}
+                    <div class="audio-item">
+                        <audio controls class="audio">
+                            <source src="{{ url_for('serve_media', folder_name='WhatsApp_Voice_Notes', subfolder_name='WhatsApp Voice Notes', filename=audio_file) }}" type="audio/ogg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <p>{{ audio_file }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No audio found.</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WhatsApp Data Extraction</p>
+    </footer>
+</body>
+</html>

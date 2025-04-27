@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="https://kit.fontawesome.com/9650a62e47.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <title>Your Page Title</title>
+</head>
+<body>
+  <header id="header">
+    <nav id="nav-bar">
+      <span class="material-symbols-outlined">
+        frame_inspect
+        </span>
+      <div id="title"> Social Media Data Extractor Tool </div>
+      <!-- <img id="header-img" src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="logo" class="logo">
+      <ul> -->
+        
+        <a class="nav-link" href="#how-it-work">About</a>
+        <a class="nav-link" href="#pricing">Blogs</a>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="container">
+    <section class="message-box">
+      <h1 class="hovertext">Connect Your Device here</h1>
+      <input id="connectButton" type="submit" value="Connect" class="btn" />
+    </section>
+    <div id="Extra" class="message-box">Which social media app data do you want to extract?</div>
+    <section id="pricing">
+      <div class="price-box">
+        <h3>All Data Recovery</h3>
+        <i class="fa-solid fa-file fa-sm" style="color: #0d0d0d;"></i>
+        <button class="btn1">SELECT</button> 
+      </div>
+      <div class="price-box">
+        <h3>WhatsApp</h3>
+        <i class="fa-brands fa-whatsapp" style="color: #0c0c0c;"></i>
+        <button class="btn1" id="selectButton" onclick="window.location.href='/demo.html';">SELECT</button> 
+    </div>
+    
+    
+    
+      
+      <div class="price-box">
+        <h3>Facebook</h3>
+        <i class="fa-brands fa-facebook" style="color: #050505;"></i>
+          <button class="btn1" onclick="window.location.href='/facebook.html';">SELECT</button> 
+      </div>
+      <!-- Adding two more price boxes -->
+      <div class="price-box">
+        <h3>Twitter</h3>
+        <i class="fa-brands fa-twitter" style="color: #111111;"></i>
+          <button class="btn1">SELECT</button> 
+      </div>
+      <div class="price-box">
+        <h3>Instagram</h3>
+        <i class="fa-brands fa-instagram" style="color: #0e0e0e;"></i>
+          <button class="btn1" onclick="window.location.href='/instagram.html';">SELECT</button> 
+      </div>
+    </section>
+  </div>
+  <!-- FOOTER -->
+  <script src="{{ url_for('static', filename='MainPage.js') }}"></script>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Documents</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='documents.css') }}?v={{ timestamp }}">
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Documents</h1>
+    </header>
+
+    <main>
+        <div class="documents-container">
+            {% if documents %}
+                <div class="document-grid">
+                    {% for doc in documents %}
+                    <div class="document-item">
+                        <i class="fa-solid fa-file-pdf fa-2x doc-icon"></i>
+
+                        <a href="{{ url_for('serve_media', folder_name='WhatsApp_Documents', subfolder_name='WhatsApp Documents', filename=doc) }}" target="_blank">
+
+
+                            {{ doc }}
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No documents found.</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WhatsApp Data Extraction</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WhatsApp Chat Export</title>
+    <style>
+        .container {
+            width: 45%;
+            margin: auto;
+            padding: 20px;
+            
+            
+            border: 5px solid #00f91d;
+            border-radius: 5px;
+            background-color: #ffffff;
+            position: relative;
+            top: 150px;
+        }
+
+        body {
+            background-color: #a8ff073a;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            color: #00f91d;
+        }
+
+        button {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            font-size:25px ;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #00f91d;
+            color: white;
+        }
+
+        label {
+            font-size: 25px;
+            color: #000000;
+        }
+
+        .media_option {
+            font-size: 20px;
+            padding: 5px;
+            width: 160px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .number_box {
+            font-size: 20px;
+            padding: 5px;
+            width: 120px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+    </style>
+</head>
+<body><center>
+    <div class="container">
+    <h2>Export WhatsApp Chats</h2>
+    <form action="/start" method="post">
+        <label>Phone Number:</label>
+        <input type="text" name="phone_number" required class="number_box"><br><br>
+
+        <label>Export Option:</label>
+        <select name="media_option" class="media_option">
+            <option value="without">Without Media</option>
+            <option value="include">Include Media</option>
+        </select><br><br>
+
+        <button type="submit">Export</button>
+    </form>
+
+    {% if status %}
+        <p>{{ status }}</p>
+    {% endif %}
+    </div>
+</center>
+</body>
+</html>

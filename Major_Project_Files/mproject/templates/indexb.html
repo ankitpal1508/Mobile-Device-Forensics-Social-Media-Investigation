@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Chat Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        
+        
+        h2,ul,p{
+            margin-top: 20px;
+            background-color: rgba(0, 252, 214, 0.358);
+        }
+
+        h1 {
+            text-align: center;
+            color: #069da2;
+        }
+
+        input,button{
+            position: relative;
+            left: 34%;
+            font-size: 20px;
+            margin: 20px auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Upload WhatsApp Chat (.txt)</h1>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="chatfile" accept=".txt" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if messages %}
+        <h2>Extracted Messages</h2>
+        <ul>
+            {% for msg in messages %}
+                <li><strong>{{ msg.timestamp }}</strong> - <strong>{{ msg.sender }}</strong>: {{ msg.message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <center>
+        {% if json_file %}
+        <p><a href="{{ url_for('download_file', filename=json_file) }}" download>⬇️ Download Extracted JSON</a></p>
+        {% endif %}
+    </center>
+    
+</body>
+</html>

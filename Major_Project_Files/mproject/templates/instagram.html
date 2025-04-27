@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Data Extraction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='instagram.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="question">What type of data do you want to extract?</div>
+            <div class="grid">
+                
+                <div class="option">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Search History</p>
+                </div>
+                <div class="option">
+                    <i class="fa-brands fa-meta"></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Meta Apps</p>
+                </div>
+                
+                <div class="option">
+                    <i class="fa-solid fa-link"></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Link History</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-heart"></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Likes Posts</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Saved Post</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-user-check"></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Following</p>
+                </div>
+                <div class="option">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Recommended Topic</p>
+                </div>
+                <div class="option">
+                    <i class="fa-solid fa-users""></i>
+                    <div class="checkbox"><i class="fa-regular fa-circle"></i></div>
+                    <p>Friend</p>
+                </div>
+            </div>
+
+            <button class="btn-proceed">Next</button>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="progress-text" id="progress-text"></div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='instagram.js') }}"></script>
+</body>
+</html>

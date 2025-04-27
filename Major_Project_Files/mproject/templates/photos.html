@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Photos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='photos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Photos</h1>
+    </header>
+
+    <main>
+        <div class="photos-container">
+            {% if photos %}
+                <div class="photo-gallery">
+                    {% for photo in photos %}
+                    <div class="photo-item">
+                        <img src="{{ url_for('serve_media', folder_name='WhatsApp_Images', subfolder_name='WhatsApp Images', filename=photo) }}" alt="{{ photo }}" class="photo">
+                        <p>{{ photo }}</p> 
+                    
+
+                        
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No photos found.</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WhatsApp Data Extraction</p>
+    </footer>
+</body>
+</html>

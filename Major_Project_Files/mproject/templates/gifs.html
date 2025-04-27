@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Animated GIFs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='videos.css') }}">
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Videos</h1>
+    </header>
+
+    <main>
+        <div class="videos-container">
+            {% if gifs %}
+                <div class="video-gallery">
+                    {% for gif in gifs %}
+                    <div class="video-item">
+                        <a href="{{ url_for('serve_media', folder_name='WhatsApp_Animated_Gifs', subfolder_name='WhatsApp Animated Gifs', filename=gif) }}" target="_blank">
+                            <img src="{{ url_for('serve_media', folder_name='WhatsApp_Animated_Gifs', subfolder_name='WhatsApp Animated Gifs', filename=photo) }}" alt="{{ gif }}" class="video/mp4">
+                        </a>
+                        <p>{{ gif }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No GIFs found.</p>
+            {% endif %}
+        </div>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2025 WhatsApp Data Extraction</p>
+    </footer>
+</body>
+</html>

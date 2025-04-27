@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Videos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='videos.css') }}?v={{ timestamp }}">
+
+    
+</head>
+<body>
+    <header>
+        <h1>WhatsApp Videos</h1>
+    </header>
+
+    <main>
+        <div class="videos-container">
+            {% if videos %}
+                <div class="video-gallery">
+                    {% for video in videos %}
+                    <div class="video-item">
+                        <video controls class="video">
+                            <source src="{{ url_for('serve_media', folder_name='WhatsApp_Video', subfolder_name='WhatsApp Video', filename=video) }}" type="video/mp4">
+                            
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>{{ video }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            {% else %}
+                <p>No videos found.</p>
+            {% endif %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 WhatsApp Data Extraction</p>
+    </footer>
+</body>
+</html>

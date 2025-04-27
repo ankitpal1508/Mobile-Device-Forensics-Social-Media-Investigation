@@ -1,0 +1,337 @@
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.material-symbols-outlined
+{
+  margin-left: 20px;
+  font-size: 40px;
+}
+.fa-brands
+{
+    position: relative;
+    /* border: 1px solid black; */
+    font-size: 170px;
+    margin-top:10px;
+    text-align:center;
+    justify-content:center
+}
+.fa-solid{
+  position: relative;
+  /* border: 1px solid black; */
+  font-size: 170px;
+  margin-top:100px;
+  text-align:center;
+  justify-content:center 
+}
+
+
+
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+#title
+{
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  margin-right: 980px;
+  padding-right: 20px;
+  font-weight: 500;
+  /* border: black 1px solid; */
+  font-size: 20px;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  display: flex;
+}
+
+#nav-bar {
+  /* border: 2px solid black; */
+  position: fixed;
+  top: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  font-size: medium;
+}
+/* #Extra
+{
+  border: 2px solid red;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+  margin-top: 40px;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+
+} */
+#Extra {
+  font-size: 1.7rem; /* Same as message-box */
+  margin: 2.2rem; /* Same margin as message-box */
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+}
+.nav-link
+{
+  color: #333;
+  background-color: rgb(295, 255, 255);
+}
+
+
+/*
+@media only screen and (max-width:600px){
+#nav-bar ul {
+  display: flex;
+}
+
+#nav-bar ul li {
+  padding: 1rem 2rem;
+}
+
+#nav-bar ul li a {
+  color: #333;
+  font-size: 1.2rem;
+}     } */
+
+/* UTILITY CLASSES */
+#container {
+  max-width: 90%; /* Remove the restriction and allow it to take full width */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow: hidden; /* Ensure no elements overflow */
+}
+
+
+.logo {
+  width: 300px;
+  cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+  body {
+      background-color: rgb(255, 255, 255);
+  }
+}
+
+.btn {
+  /* position: absolute; */
+  /* margin-top:20px; */
+  display: inline-block;
+  padding: 0.4rem 1.5rem;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: #f1c40f;
+}
+.btn1
+{
+    position: absolute;
+    border:1px solid black;
+    margin-top:210px;
+    margin-left:-125px;
+    display: inline-block;
+    padding: 0.4rem 1.5rem;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #f1c40f;
+}
+
+.nav-link {
+  position: relative;
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  /* Set the background color to match the button */
+ /* Border color matching the button text color */
+  height: 55px;
+}
+.nav-link:hover
+{
+  background-color: #f1c40f;
+}
+
+.message-box {
+  margin: 1.5rem;
+  margin-top: 70px;
+  padding: 0.8rem;
+  text-align: center;
+}
+@keyframes blink
+{
+    from
+    {
+
+        opacity: 0%;
+    }
+    to
+    {
+        opacity: 100%;
+    }
+}
+
+.message-box h1 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+   animation-name: blink;
+  animation-duration: 3s;
+   animation-timing-function: linear; 
+   animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+}
+
+.message-box input {
+  display: block;
+  margin: auto;
+  width: 15%;
+  height: 40px;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: medium;
+  border-radius: 10px;
+}
+
+#pricing {
+  display: flex;
+  justify-content: center; /* Ensure equal spacing between boxes */
+  align-items: center;
+  text-align: center;
+  /* border: 2px solid black; */
+
+  padding: -0.5rem 1rem;
+  /* flex-wrap: wrap; Allow boxes to wrap on smaller screens */
+  
+}
+
+.price-box {
+  border: solid #333 3px;
+  border-radius: 3px;
+  text-align: center;
+  flex: 2 2 calc(33% - 2rem); /* Each box takes up one-third of the row, minus space for gaps */
+  margin: 1rem; /* Add margin for spacing */
+  min-width: 240px; /* Ensure a minimum width for smaller screens */
+  height:320px;
+}
+.price-box:has(i.fa-brands.fa-whatsapp) .btn1 {
+  margin-left: 0; /* Remove the left margin */
+  margin-top: 210px; /* Adjust the top margin as needed */
+  transform: translateX(-120%); /* Center horizontally */
+}
+.price-box:has(i.fa-brands.fa-facebook) .btn1 {
+  margin-left: 0; /* Remove the left margin */
+  margin-top: 210px; /* Adjust the top margin as needed */
+  transform: translateX(-130%); /* Center horizontally */
+}
+.price-box h3 {
+  background-color: #ddd;
+  font-size: 1.05rem;
+  padding: 1rem;
+}
+
+.price-box h2 {
+  padding: 1rem;
+}
+
+.price-box p {
+  padding: 0 4rem 1rem;
+}
+
+.price-box .btn {
+  display: inline-block;
+  margin: 1rem;
+}
+
+
+/* FOOTER */
+#main-footer {
+  background-color: #ccc;
+  padding: 1rem 4rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+#main-footer div a {
+  color: #333;
+  padding: 0.5rem 1rem;
+}
+
+#fcs {
+  text-decoration: underline;
+  color: #333;
+}
+
+/* TABLET AND SMARTPHONE */
+@media only screen and (max-width: 800px) {
+  #navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0.3rem;
+  }
+
+  #navbar ul li {
+    padding: 1rem 1rem;
+  }
+
+  #features .feature {
+    flex-direction: column;
+  }
+
+  #features .feature div {
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  #how-it-work {
+    padding: 1rem;
+  }
+
+  #how-it-work #video {
+    width: 80%;
+    height: 30%;
+  }
+
+  #pricing {
+    flex-direction: column;
+  }
+
+  #pricing .price-box {
+    margin: 1rem;
+  }
+
+  .price-box:first-child {
+    margin-right: 0;
+  }
+
+  .price-box:last-child {
+    margin-left: 0;
+  }
+}
